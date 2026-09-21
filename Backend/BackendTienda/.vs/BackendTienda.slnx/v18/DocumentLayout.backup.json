@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jjvar\\OneDrive\\Desktop\\ProyectoFinanciero\\Backend\\BackendTienda\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BCC3970F-65AD-1FF5-76B1-0B2D10549A67}|BackendTienda\\BackendTienda.csproj|c:\\users\\jjvar\\onedrive\\desktop\\proyectofinanciero\\backend\\backendtienda\\backendtienda\\feautures\\employees\\employeeresponses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCC3970F-65AD-1FF5-76B1-0B2D10549A67}|BackendTienda\\BackendTienda.csproj|solutionrelative:backendtienda\\feautures\\employees\\employeeresponses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCC3970F-65AD-1FF5-76B1-0B2D10549A67}|BackendTienda\\BackendTienda.csproj|c:\\users\\jjvar\\onedrive\\desktop\\proyectofinanciero\\backend\\backendtienda\\backendtienda\\feautures\\employees\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCC3970F-65AD-1FF5-76B1-0B2D10549A67}|BackendTienda\\BackendTienda.csproj|solutionrelative:backendtienda\\feautures\\employees\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BCC3970F-65AD-1FF5-76B1-0B2D10549A67}|BackendTienda\\BackendTienda.csproj|c:\\users\\jjvar\\onedrive\\desktop\\proyectofinanciero\\backend\\backendtienda\\backendtienda\\feautures\\employees\\employeerequests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BCC3970F-65AD-1FF5-76B1-0B2D10549A67}|BackendTienda\\BackendTienda.csproj|solutionrelative:backendtienda\\feautures\\employees\\employeerequests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmployeeService.cs",
+              "DocumentMoniker": "C:\\Users\\jjvar\\OneDrive\\Desktop\\ProyectoFinanciero\\Backend\\BackendTienda\\BackendTienda\\Feautures\\Employees\\EmployeeService.cs",
+              "RelativeDocumentMoniker": "BackendTienda\\Feautures\\Employees\\EmployeeService.cs",
+              "ToolTip": "C:\\Users\\jjvar\\OneDrive\\Desktop\\ProyectoFinanciero\\Backend\\BackendTienda\\BackendTienda\\Feautures\\Employees\\EmployeeService.cs",
+              "RelativeToolTip": "BackendTienda\\Feautures\\Employees\\EmployeeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T13:10:39.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeeResponses.cs",
+              "DocumentMoniker": "C:\\Users\\jjvar\\OneDrive\\Desktop\\ProyectoFinanciero\\Backend\\BackendTienda\\BackendTienda\\Feautures\\Employees\\EmployeeResponses.cs",
+              "RelativeDocumentMoniker": "BackendTienda\\Feautures\\Employees\\EmployeeResponses.cs",
+              "ToolTip": "C:\\Users\\jjvar\\OneDrive\\Desktop\\ProyectoFinanciero\\Backend\\BackendTienda\\BackendTienda\\Feautures\\Employees\\EmployeeResponses.cs",
+              "RelativeToolTip": "BackendTienda\\Feautures\\Employees\\EmployeeResponses.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T13:09:04.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployeeRequests.cs",
+              "DocumentMoniker": "C:\\Users\\jjvar\\OneDrive\\Desktop\\ProyectoFinanciero\\Backend\\BackendTienda\\BackendTienda\\Feautures\\Employees\\EmployeeRequests.cs",
+              "RelativeDocumentMoniker": "BackendTienda\\Feautures\\Employees\\EmployeeRequests.cs",
+              "ToolTip": "C:\\Users\\jjvar\\OneDrive\\Desktop\\ProyectoFinanciero\\Backend\\BackendTienda\\BackendTienda\\Feautures\\Employees\\EmployeeRequests.cs",
+              "RelativeToolTip": "BackendTienda\\Feautures\\Employees\\EmployeeRequests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-21T13:05:54.986Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

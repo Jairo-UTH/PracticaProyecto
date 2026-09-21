@@ -1,0 +1,37 @@
+@BackendTienda_HostAddress = http://localhost:5046
+
+GET {{BackendTienda_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{BackendTienda_HostAddress}}/api/category/getAll
+
+###
+
+POST {{BackendTienda_HostAddress}}/api/product/create
+
+###
+
+GET {{BackendTienda_HostAddress}}/api/product/getAll
+
+###
+
+POST {{BackendTienda_HostAddress}}/api/order/create
+Content-Type: application/json
+
+{
+  "totalAmount":300,
+  "details":[{
+    "productId":1,
+    "quantity":1,
+    "unitPrice":300
+  }
+  ]
+}
+
+###
+
+GET {{BackendTienda_HostAddress}}/api/order/getAll
+
+###
