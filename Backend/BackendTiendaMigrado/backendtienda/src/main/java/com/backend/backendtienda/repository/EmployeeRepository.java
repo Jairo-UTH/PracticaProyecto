@@ -12,7 +12,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
     @Override
     @EntityGraph(attributePaths = "position")
     List<Employee> findAll();
-
+    Optional<Employee> findByEmail(String email);
     @Override
     @EntityGraph(attributePaths = "position")
     Optional<Employee> findById(Integer id);

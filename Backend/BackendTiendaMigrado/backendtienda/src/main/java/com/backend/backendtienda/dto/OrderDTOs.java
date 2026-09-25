@@ -23,7 +23,7 @@ public final class OrderDTOs {
     // ===== responses =====
     public record GetOrderResponse(
             Integer orderId,
-            String date,                      // ← antes orderDate
+            String date,                      
             BigDecimal totalAmount,
             List<GetOrderDetailResponse> details) {
     }
@@ -32,6 +32,6 @@ public final class OrderDTOs {
             String imageUrl,
             String productName,
             Integer quantity,
-            BigDecimal total) {               // ← antes subtotal
+            BigDecimal total) {               
     }
 }

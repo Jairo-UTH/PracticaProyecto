@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.util.List;
+import com.backend.backendtienda.dto.ProductDTOs.UpdateProductRequest;
 
 @RestController
 @RequestMapping({"/api/Product", "/api/product"})
@@ -30,5 +31,17 @@ public class ProductController {
     public ResponseEntity<List<GetProductResponse>> getAll(@ModelAttribute ReturnProductRequest request) {
         String url = ServletUriComponentsBuilder.fromCurrentContextPath().toUriString();
         return ResponseEntity.ok(service.getAll(url, request.categoryId()));
+    }
+
+   @PutMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<Void> update(@ModelAttribute UpdateProductRequest request) {
+    service.update(request);
+    return ResponseEntity.ok().build();
+}
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable Integer id) {
+        service.delete(id);
+        return ResponseEntity.ok().build();
     }
 }

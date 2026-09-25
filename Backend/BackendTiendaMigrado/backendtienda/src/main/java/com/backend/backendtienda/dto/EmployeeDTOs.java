@@ -22,14 +22,16 @@ public final class EmployeeDTOs {
             String fullName,
             String email,
             LocalDate birthDate,
-            Integer positionId) {
+            Integer positionId,
+            String password) {   
     }
 
     public record UpdateEmployee(
-            Integer employeeId,
-            String fullName,
-            String email,
-            LocalDate birthDate,
-            Integer positionId) {
-    }
+        Integer employeeId,
+        String fullName,
+        String email,
+        LocalDate birthDate,
+        Integer positionId,
+        String password) {   
+}
 }

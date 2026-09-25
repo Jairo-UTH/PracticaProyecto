@@ -33,8 +33,8 @@ public class Product {
     @Column(name = "image")
     private String image;
 
-    @CreationTimestamp                                                   // ← NUEVO
-    @Column(name = "createdat", nullable = false, updatable = false)     // ← MODIFICADO
+    @CreationTimestamp                                                   
+    @Column(name = "createdat", nullable = false, updatable = false)     
     private LocalDateTime createdAt;
 
     @OneToMany(mappedBy = "product")

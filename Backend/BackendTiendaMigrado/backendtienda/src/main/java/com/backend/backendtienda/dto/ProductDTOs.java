@@ -18,6 +18,15 @@ public final class ProductDTOs {
             MultipartFile image) {
     }
 
+    public record UpdateProductRequest(
+            Integer productId,
+            Integer categoryId,
+            String name,
+            BigDecimal price,
+            Integer stockQuantity,
+            MultipartFile image) {    
+    }
+
     public record ReturnProductRequest(String categoryId) {
     }
 

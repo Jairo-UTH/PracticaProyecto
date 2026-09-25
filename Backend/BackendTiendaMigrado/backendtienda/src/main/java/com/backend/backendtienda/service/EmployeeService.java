@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.List;
 
@@ -19,11 +20,14 @@ public class EmployeeService {
 
     private final EmployeeRepository employeeRepository;
     private final PositionRepository positionRepository;
+    private final PasswordEncoder passwordEncoder;   
 
     public EmployeeService(EmployeeRepository employeeRepository,
-                           PositionRepository positionRepository) {
+                           PositionRepository positionRepository,
+                           PasswordEncoder passwordEncoder) {   
         this.employeeRepository = employeeRepository;
         this.positionRepository = positionRepository;
+        this.passwordEncoder = passwordEncoder;   
     }
 
     @Transactional(readOnly = true)
@@ -45,19 +49,24 @@ public class EmployeeService {
         employee.setEmail(req.email());
         employee.setBirthDate(req.birthDate());
         employee.setPosition(findPosition(req.positionId()));
+        employee.setPassword(passwordEncoder.encode(req.password()));   // ← NUEVO
 
         employeeRepository.save(employee);
     }
 
     @Transactional
     public void update(UpdateEmployee req) {
-        Employee employee = findEmployee(req.employeeId());
-        employee.setFullName(req.fullName());
-        employee.setEmail(req.email());
-        employee.setBirthDate(req.birthDate());
-        employee.setPosition(findPosition(req.positionId()));
-        // Hibernate guarda los cambios al terminar la transacción
+    Employee employee = findEmployee(req.employeeId());
+    employee.setFullName(req.fullName());
+    employee.setEmail(req.email());
+    employee.setBirthDate(req.birthDate());
+    employee.setPosition(findPosition(req.positionId()));
+
+    if (req.password() != null && !req.password().isBlank()) {  
+        employee.setPassword(passwordEncoder.encode(req.password()));
     }
+    
+}
 
     @Transactional
     public void delete(Integer id) {

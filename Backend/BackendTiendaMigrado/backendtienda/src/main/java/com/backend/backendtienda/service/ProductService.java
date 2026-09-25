@@ -2,6 +2,7 @@ package com.backend.backendtienda.service;
 
 import com.backend.backendtienda.dto.ProductDTOs.CreateProductRequest;
 import com.backend.backendtienda.dto.ProductDTOs.GetProductResponse;
+import com.backend.backendtienda.dto.ProductDTOs.UpdateProductRequest;
 import com.backend.backendtienda.entity.Category;
 import com.backend.backendtienda.entity.Product;
 import com.backend.backendtienda.repository.CategoryRepository;
@@ -99,4 +100,56 @@ public class ProductService {
         }
         return serverUrl + "/" + folder + "/" + image;
     }
+
+
+
+    //
+    @Transactional
+    public void update(UpdateProductRequest req) {
+    Product product = productRepository.findById(req.productId())
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "El producto no existe"));
+
+    Category category = categoryRepository.findById(req.categoryId())
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.BAD_REQUEST, "La categoría no existe"));
+
+    product.setCategory(category);
+    product.setName(req.name());
+    product.setPrice(req.price());
+    product.setStockQuantity(req.stockQuantity());
+
+    MultipartFile image = req.image();
+    if (image != null && !image.isEmpty()) {
+        String oldImage = product.getImage();
+
+        String extension = StringUtils.getFilenameExtension(image.getOriginalFilename());
+        String suffix = (extension != null && extension.matches("[A-Za-z0-9]{1,10}")) ? "." + extension : "";
+        String fileName = UUID.randomUUID() + suffix;
+
+        try (InputStream in = image.getInputStream()) {
+            Files.copy(in, uploadsFolder.resolve(fileName));
+        } catch (IOException e) {
+            throw new UncheckedIOException("No se pudo guardar la imagen", e);
+        }
+
+        product.setImage(fileName);
+
+        
+        if (oldImage != null && !oldImage.isBlank()) {
+            try {
+                Files.deleteIfExists(uploadsFolder.resolve(oldImage));
+            } catch (IOException e) {
+                
+            }
+        }
+    }
+    
+}
+
+@Transactional
+public void delete(Integer id) {
+    Product product = productRepository.findById(id)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "El producto no existe"));
+
+    productRepository.delete(product);
+}
 }

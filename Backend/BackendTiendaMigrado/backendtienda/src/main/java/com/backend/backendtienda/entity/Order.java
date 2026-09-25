@@ -24,7 +24,7 @@ public class Order {
     @Column(name = "orderdate", nullable = false, updatable = false)
     private LocalDateTime orderDate;
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.PERSIST)   // ← CAMBIADO
+    @OneToMany(mappedBy = "order", cascade = CascadeType.PERSIST)   
     private List<OrderDetail> orderDetails = new ArrayList<>();
 
     public Order() {

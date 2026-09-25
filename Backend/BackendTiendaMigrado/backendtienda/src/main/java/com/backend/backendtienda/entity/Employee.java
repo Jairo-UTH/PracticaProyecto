@@ -75,4 +75,16 @@ public class Employee {
     public void setPosition(Position position) {
         this.position = position;
     }
+//Validacion de Contraseña
+    @Column(name = "password")
+    private String password;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
 }
